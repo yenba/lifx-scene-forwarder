@@ -1,8 +1,8 @@
 version: '3.5'
 services:
-  lifx:
-    container_name: lifx
-    image: lifx
+  lifx-scene-forwarder:
+    container_name: lifx-scene-forwarder
+    image: yenba/lifx-scene-forwarder
     ports:
       - 80:80
     volumes:
