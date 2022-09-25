@@ -3,7 +3,6 @@ services:
   lifx-scene-forwarder:
     container_name: lifx-scene-forwarder
     image: yenba/lifx-scene-forwarder
-    hostname: lifx-scene-forwarder
     ports:
       - 8088:80
     volumes:
