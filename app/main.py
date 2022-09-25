@@ -5,7 +5,7 @@ import requests
 import pandas as pd
 
 # setup variables
-CONFIGFILENAME = 'lifxconfig.cfg'
+CONFIGFILENAME = 'config/lifxconfig.cfg'
 TOKEN_LENGTH = 64
 DEFAULT_LIFX_API_KEY = ''
 LIFX_API_KEY = DEFAULT_LIFX_API_KEY
@@ -54,6 +54,9 @@ def GetScenes():
 # create the API
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 
 @app.get("/scenes/{sceneName}")
 async def read_item(sceneName):

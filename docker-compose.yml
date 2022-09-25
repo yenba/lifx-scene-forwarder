@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  lifx:
+    container_name: lifx
+    image: lifx
+    ports:
+      - 80:80
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped
